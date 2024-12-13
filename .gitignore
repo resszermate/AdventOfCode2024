@@ -1,0 +1,52 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Copilot Indices
+**/CopilotIndices/
+
+# DesignTimeBuild
+**/DesignTimeBuild/
+
+# Project Evaluation
+**/ProjectEvaluation/
+
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.vsidx
+*.dtbcache.v2
+*.futdcache.v2
+*.AssemblyAttributes.cs
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.GlobalUsings.g.cs
+*.assets.cache
+*.BuildWithSkipAnalyzers
+*.CoreCompileInputs.cache
+*.FileListAbsolute.txt
+*.genruntimeconfig.cache
+*.nuget.dgspec.json
+*.nuget.g.props
+*.nuget.g.targets
+*.deps.json
+*.dll
+*.exe
+*.pdb
+*.runtimeconfig.json
+*.cache
+*.json
+*.txt
