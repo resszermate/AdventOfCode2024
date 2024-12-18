@@ -44,7 +44,7 @@
 
 
             }
-            Console.WriteLine(safeReports);
+            //Console.WriteLine(safeReports);
 
         }
 
@@ -71,6 +71,39 @@
                     else
                     {
                         // Try removing each element once and see if removing it makes the report safe
+                        for (int i = 0; i < values.Length; i++)
+                        {
+                            List<int> valuesDampened = values.ToList();
+                            valuesDampened.RemoveAt(i);
+                            int counterDampened = 0;
+                            if (valuesDampened[0] > valuesDampened[1])
+                            {
+                                while (counterDampened < valuesDampened.Count - 1 && valuesDampened[counterDampened] > valuesDampened[counterDampened + 1] && valuesDampened[counterDampened] - valuesDampened[counterDampened + 1] >= 1 && valuesDampened[counterDampened] - valuesDampened[counterDampened + 1] <= 3)
+                                {
+                                    counterDampened++;
+                                }
+                                if (counterDampened >= valuesDampened.Count - 1)
+                                {
+                                    safeReports++;
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                while (counterDampened < valuesDampened.Count - 1 && valuesDampened[counterDampened] < valuesDampened[counterDampened + 1] && valuesDampened[counterDampened + 1] - valuesDampened[counterDampened] >= 1 && valuesDampened[counterDampened + 1] - valuesDampened[counterDampened] <= 3)
+                                {
+                                    counterDampened++;
+                                }
+                                if (counterDampened >= valuesDampened.Count - 1)
+                                {
+                                    safeReports++;
+                                    break;
+                                }
+                            }
+                            
+
+
+                        }
                     }
                 }
                 else
@@ -84,9 +117,46 @@
                     {
                         safeReports++;
                     }
+                    else
+                    {
+                        // Try removing each element once and see if removing it makes the report safe
+                        for (int i = 0; i < values.Length; i++)
+                        {
+                            List<int> valuesDampened = values.ToList();
+                            valuesDampened.RemoveAt(i);
+                            int counterDampened = 0;
+                            if (valuesDampened[0] > valuesDampened[1])
+                            {
+                                while (counterDampened < valuesDampened.Count - 1 && valuesDampened[counterDampened] > valuesDampened[counterDampened + 1] && valuesDampened[counterDampened] - valuesDampened[counterDampened + 1] >= 1 && valuesDampened[counterDampened] - valuesDampened[counterDampened + 1] <= 3)
+                                {
+                                    counterDampened++;
+                                }
+                                if (counterDampened >= valuesDampened.Count - 1)
+                                {
+                                    safeReports++;
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                while (counterDampened < valuesDampened.Count - 1 && valuesDampened[counterDampened] < valuesDampened[counterDampened + 1] && valuesDampened[counterDampened + 1] - valuesDampened[counterDampened] >= 1 && valuesDampened[counterDampened + 1] - valuesDampened[counterDampened] <= 3)
+                                {
+                                    counterDampened++;
+                                }
+                                if (counterDampened >= valuesDampened.Count - 1)
+                                {
+                                    safeReports++;
+                                    break;
+                                }
+                            }
+                        }
 
-                }
+                        }
+
+                    }
             }
+            Console.WriteLine(safeReports);
         }
+  
     }
 }
